@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Please enter 2 numbers below</p>
+<form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+<input type="number" id="input3"/>
+</form>
+<div><button id="button1">Sum of the two numbers</button></div>
+<div id="answer"></div>
+<div id="largestNumber"></div>
+<div id="sameDifferent"></div>
+<div id="output1"></div>
+<div id="output2"></div>
+<div id='threeValues'></div>
+<div id="demo"></div>
+
+<script>
+    var myButton1 = document.getElementById("button1");
+    
+    myButton1.addEventListener("click", checkInput, false);
+    
+    function checkInput() {
+        var x = parseInt(document.getElementById("input1").value);
+        console.log(x);
+        var y = parseInt(document.getElementById("input2").value);
+        console.log(y);
+        
+/* 4. Sum of number */
+        var a = x + y;
+        /*console.log(z);
+        alert(z);*/
+        var myAnswer = document.getElementById("answer");
+        myAnswer.innerHTML = a;
+        
+/* 5. Largest number */
+        var myLargest = document.getElementById("largestNumber");
+        if(x > y) {
+            myLargest.innerHTML = x;
+        } else {
+            myLargest.innerHTML = y;
+        }
+       
+/* 6. Same or Different */
+        var mySameDiff = document.getElementById("sameDifferent");
+        if(x === y) {
+            mySameDiff.innerHTML = 'SAME';
+            /*alert("SAME");*/
+        } else {
+            mySameDiff.innerHTML = 'DIFFERENT';
+            /*alert("DIFFERENT");*/
+        }
+        
+/* 7. Number less and number more than one number entered */      
+        var myOutput1 = document.getElementById("output1");
+        myOutput1.innerHTML = x - 1;
+        /*alert(x - 1);*/
+        
+        var myOutput2 = document.getElementById("output2");
+        myOutput2.innerHTML = x + 1;
+        
+        
+                
+    }
+    
+ 
+      
+</script>
+
+</body>
+</html>

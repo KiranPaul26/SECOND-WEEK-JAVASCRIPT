@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <p>Please enter a values below</p>
+<form>
+<input type="text" id="input1"/>
+
+</form>
+<div><button id="button1">Button</button></div>
+<div id="demo"></div>
+
+<script>
+    var myButton = document.getElementById("button1");
+    myButton.addEventListener("click", userInputValue, false);
+    
+    function userInputValue() {
+        
+        var userInput = document.getElementById("input1").value;
+        document.getElementById("demo").innerHTML = userInput;
+    }
+    
+    
+    
+</script>
+</body>
+</html>
